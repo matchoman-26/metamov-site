@@ -6,7 +6,31 @@
 <title>Meta Mov · Movement for real life · Riyadh</title>
 <meta name="description" content="Helping busy people in Riyadh move more, whatever life throws at them. Join the free 21-day challenge with Mazen.">
 <link rel="icon" href="icon.png">
-<style>html{scroll-behavior:smooth}</style>
+<style>html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+.rail::-webkit-scrollbar,.strip::-webkit-scrollbar{display:none}
+@media (max-width:820px){
+ section{padding-top:56px !important;padding-bottom:56px !important}
+ #reels{padding-top:0 !important}
+ header .wrap{height:64px !important}
+ header img{height:24px !important}
+ header a[href="#challenge"]{padding:10px 16px !important;font-size:13px !important}
+ .hero h1{font-size:46px !important}
+ .hero{padding-top:36px !important}
+ h2{font-size:34px !important;line-height:1.02 !important}
+ h3{font-size:22px !important}
+ p{font-size:16px !important}
+ .grid2{gap:32px !important}
+ .wrap > div[style*="gap: 72px"],#challenge > .wrap{gap:48px !important}
+ .strip{flex-wrap:nowrap !important;overflow-x:auto;font-size:16px !important;gap:24px !important;white-space:nowrap;padding-top:16px !important;padding-bottom:16px !important}
+ .rail{display:flex !important;flex-wrap:nowrap !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .rail > *{flex:0 0 80% !important;scroll-snap-align:start;min-height:0 !important}
+ .rail-wide > *{flex:0 0 336px !important}
+ .pad-m{padding:24px !important}
+ #hero-media,#challenge-video{max-width:420px;margin:0 auto;width:100%}
+ a[style*="padding: 18px 30px"],a[style*="padding: 17px 28px"]{padding:15px 22px !important;font-size:15px !important}
+}
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -64,7 +88,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 
 <!-- BARRIERS STRIP -->
 <section style="background: #FFD400; color: #111111">
-<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; padding-top: 26px; padding-bottom: 26px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase">
+<div class="wrap strip" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; padding-top: 26px; padding-bottom: 26px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase">
 <span>No time?</span><span>Too hot?</span><span>Too old?</span><span>Kids?</span><span>Work?</span><span>Move anyway.</span>
 </div>
 </section>
@@ -96,7 +120,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <div id="how" style="display: flex; flex-direction: column; gap: 28px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">Your daily 3 wins</span>
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 48px; line-height: 1; text-transform: uppercase">Tick 3 boxes. That's the whole day.</h2>
-<div class="grid3">
+<div class="grid3 rail">
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px; border: 1.5px solid #3A3A3A"><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 28px">Fuel</h3></div><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">One simple nutrition habit, like a protein-first breakfast, or swapping one sugary drink for water. You'll get the day's tip on WhatsApp each morning.</p></div>
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px; border: 1.5px solid #3A3A3A"><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 28px">Move</h3></div><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">20 minutes, your way: a walk after dinner, a home workout, a run before the heat. Something always beats nothing.</p></div>
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px; border: 1.5px solid #3A3A3A"><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 28px">Check in</h3></div><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Drop a quick photo or a ✅ in the group. Takes 10 seconds and keeps you going, and lifts everyone else too.</p></div>
@@ -106,14 +130,14 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 
 <div style="display: flex; flex-direction: column; gap: 28px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">The 3 weeks</span>
-<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div class="rail" style="display: flex; flex-wrap: wrap; gap: 32px">
 <div style="flex: 1 1 240px; border-top: 4px solid #FFD400; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">Week 1</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 30px">Reset</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Clean up the basics: water, protein, sleep, and getting moving every day.</p></div>
 <div style="flex: 1 1 240px; border-top: 4px solid #FFD400; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">Week 2</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 30px">Build</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Stack the habits. A bit more movement, smarter food swaps, the 5am crew if you're brave.</p></div>
 <div style="flex: 1 1 240px; border-top: 4px solid #FFD400; padding-top: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">Week 3</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase; font-size: 30px">Own it</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Make it stick. Find what fits your real life, then finish strong together.</p></div>
 </div>
 </div>
 
-<div style="background: #FFD400; color: #111111; border-radius: 24px; padding: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center">
+<div class="pad-m" style="background: #FFD400; color: #111111; border-radius: 24px; padding: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase">Recognition, not rankings</span>
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 44px; line-height: 1; text-transform: uppercase">Show up. Lift others. Get noticed.</h2>
@@ -128,7 +152,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 
 <div style="display: flex; flex-direction: column; gap: 28px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">How to join</span>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div class="rail" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #FFD400; color: #111111; display: flex; align-items: center; justify-content: center; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 20px">1</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase">Sign up</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Fill in the form below. 30 seconds, free.</p></div>
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #FFD400; color: #111111; display: flex; align-items: center; justify-content: center; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 20px">2</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase">Join the group</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">You'll go straight into the private Meta Mov WhatsApp challenge group.</p></div>
 <div style="background: #1E1E1E; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #FFD400; color: #111111; display: flex; align-items: center; justify-content: center; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 20px">3</span><h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 24px; text-transform: uppercase">Day 0 snapshot</h3><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD">Optional and private: a starting photo or measurement, just for you.</p></div>
@@ -146,7 +170,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <details style="border-bottom: 1px solid #2A2A2A; padding: 18px 0"><summary style="cursor: pointer; font-weight: 600; font-size: 17px">Is it in English or Arabic?</summary><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD; margin-top: 10px">[LANGUAGE: English / Arabic / both]</p></details>
 <details style="border-bottom: 1px solid #2A2A2A; padding: 18px 0"><summary style="cursor: pointer; font-weight: 600; font-size: 17px">Any health conditions?</summary><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #BDBDBD; margin-top: 10px">Check with your doctor before changing your diet or exercise if you have a medical condition or are pregnant.</p></details>
 </div>
-<form id="challenge-form" style="background: #F7F7F7; color: #111111; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px" aria-label="Join the challenge">
+<form id="challenge-form" class="pad-m" style="background: #F7F7F7; color: #111111; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 18px" aria-label="Join the challenge">
 <h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 30px; text-transform: uppercase">Save your spot</h3>
 <p style="margin: 0; font-size: 15px; color: #555555">Free. Limited spots so the group stays personal.</p>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Full name<input name="name" type="text" required placeholder="Your name" style="font: inherit; font-weight: 400; padding: 14px 16px; border: 1.5px solid #D9D9D9; border-radius: 12px; background: #FFFFFF"></label>
@@ -180,7 +204,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <section style="padding: 112px 0">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 56px; line-height: 1; text-transform: uppercase; max-width: 760px">Three ways to move with us</h2>
-<div class="grid3">
+<div class="grid3 rail">
 <a href="#reels" style="text-decoration: none; color: #F7F7F7; background: #1E1E1E; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 14px; min-height: 260px">
 <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 15px; color: #FFD400">01</span>
 <span style="font-family: Montserrat, sans-serif; font-weight: 900; font-size: 30px; text-transform: uppercase">Mazen Moves</span>
@@ -207,7 +231,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 44px; text-transform: uppercase">Latest on @meta_mov</h2>
 <a href="https://instagram.com/meta_mov" style="font-weight: 600; font-size: 16px">Follow on Instagram →</a>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(326px, 1fr)); gap: 16px">
+<div class="rail rail-wide" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(326px, 1fr)); gap: 16px">
 <div data-reel="0" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="hero.jpg" alt="Unsalted vs salted nuts reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">Unsalted vs salted nuts</span></div>
 <div data-reel="1" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="point.jpg" alt="Choosing a better cereal reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">Choosing a better cereal</span></div>
 <div data-reel="2" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="shelf.jpg" alt="The tuna aisle, decoded reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">The tuna aisle, decoded</span></div>
