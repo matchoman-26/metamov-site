@@ -11,7 +11,8 @@ html,body{overflow-x:hidden}
 .rail::-webkit-scrollbar,.strip::-webkit-scrollbar{display:none}
 @media (max-width:820px){
  section{padding-top:56px !important;padding-bottom:56px !important}
- #reels{padding-top:0 !important}
+ #reels,.strip-sec{padding-top:0 !important}
+ .strip-sec{padding-bottom:0 !important}
  header .wrap{height:64px !important}
  header img{height:24px !important}
  header a[href="#challenge"]{padding:10px 16px !important;font-size:13px !important}
@@ -87,7 +88,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 </section>
 
 <!-- BARRIERS STRIP -->
-<section style="background: #FFD400; color: #111111">
+<section class="strip-sec" style="background: #FFD400; color: #111111">
 <div class="wrap strip" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; padding-top: 26px; padding-bottom: 26px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase">
 <span>No time?</span><span>Too hot?</span><span>Too old?</span><span>Kids?</span><span>Work?</span><span>Move anyway.</span>
 </div>
