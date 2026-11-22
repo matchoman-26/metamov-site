@@ -53,7 +53,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <a href="#mazen" id="hero-watch" style="border: 1.5px solid #F7F7F7; color: #F7F7F7; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Watch Mazen's story</a>
 </div>
 </div>
-<div style="position: relative; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; background: #1E1E1E"><img src="hero.jpg" alt="Mazen talking to camera in a supermarket aisle" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div id="hero-media" style="position: relative; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; background: #1E1E1E"><img src="hero.jpg" alt="Mazen talking to camera in a supermarket aisle" style="width: 100%; height: 100%; object-fit: cover; display: block">
 <div style="position: absolute; left: 20px; bottom: 20px; background: #111111; border-radius: 14px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px">
 <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 26px; color: #FFD400">226 km</span>
 <span style="font-size: 13px; color: #BDBDBD">Ironman distance, trained around family &amp; work</span>
@@ -142,7 +142,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 44px; text-transform: uppercase">Latest on @meta_mov</h2>
 <a href="https://instagram.com/meta_mov" style="font-weight: 600; font-size: 16px">Follow on Instagram →</a>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(326px, 1fr)); gap: 16px">
 <div data-reel="0" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="hero.jpg" alt="Unsalted vs salted nuts reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">Unsalted vs salted nuts</span></div>
 <div data-reel="1" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="point.jpg" alt="Choosing a better cereal reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">Choosing a better cereal</span></div>
 <div data-reel="2" style="position: relative; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #1E1E1E"><img src="shelf.jpg" alt="The tuna aisle, decoded reel" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 16px; background: linear-gradient(transparent, rgba(17,17,17,0.92)); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; color: #F7F7F7">The tuna aisle, decoded</span></div>
@@ -216,11 +216,13 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 var HERO_REEL = "https://www.instagram.com/reel/DfjpG0jMtFE/";          // Mazen's story reel
 var REELS = ["https://www.instagram.com/reel/Df7TJInME3i/", "https://www.instagram.com/reel/DfbpgLDMr5S/", "https://www.instagram.com/reel/DftrJ8gMXqF/", ""]; // Latest on @meta_mov, left to right
 /* ============================================================================================ */
-function embed(url){var b=document.createElement('blockquote');b.className='instagram-media';b.setAttribute('data-instgrm-permalink',url);b.setAttribute('data-instgrm-version','14');b.style.cssText='margin:0;width:100%;min-width:0;max-width:100%;border:0;border-radius:18px';return b;}
+function embed(url){var b=document.createElement('blockquote');b.className='instagram-media';b.setAttribute('data-instgrm-permalink',url);b.setAttribute('data-instgrm-version','14');b.style.cssText='margin:0 auto;width:100%;min-width:326px;max-width:540px;border:0;border-radius:18px;background:#fff';return b;}
+function fill(t,u){t.innerHTML='';t.style.aspectRatio='auto';t.style.overflow='visible';t.style.background='transparent';t.appendChild(embed(u));}
 var any=false;
-REELS.forEach(function(u,i){if(!u)return;var t=document.querySelector('[data-reel="'+i+'"]');if(!t)return;t.innerHTML='';t.style.aspectRatio='auto';t.style.background='transparent';t.appendChild(embed(u));any=true;});
-if(HERO_REEL){var h=document.getElementById('hero-watch');h.href=HERO_REEL;h.target='_blank';h.rel='noopener';}
-if(any){var s=document.createElement('script');s.async=true;s.src='https://www.instagram.com/embed.js';document.body.appendChild(s);}
+REELS.forEach(function(u,i){var t=document.querySelector('[data-reel="'+i+'"]');if(!t)return;if(!u){t.setAttribute('data-empty','1');return;}fill(t,u);any=true;});
+if(any){document.querySelectorAll('[data-empty]').forEach(function(t){t.style.display='none';});}
+if(HERO_REEL){var hm=document.getElementById('hero-media');if(hm){fill(hm,HERO_REEL);any=true;}var h=document.getElementById('hero-watch');if(h){h.href='#hero-media';h.textContent="Watch Mazen's story";}}
+if(any){var sc=document.createElement('script');sc.async=true;sc.src='https://www.instagram.com/embed.js';document.body.appendChild(sc);}
 </script>
 </body>
 </html>
