@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meta Mov · Movement for real life · Riyadh</title>
-<meta name="description" content="Helping busy people in Riyadh move more, whatever life throws at them. Join the free 21-day challenge with Mazen.">
+<meta name="description" content="Helping busy people in Riyadh move more, whatever life throws at them. Join the free 21-Day Challenge with Mazen.">
 <link rel="icon" href="icon.png">
 <style>html{scroll-behavior:smooth}
 html,body{overflow-x:hidden}
@@ -59,7 +59,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 
 <!-- NAV -->
 <a id="cd-bar" href="#join" style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; background: #FFD400; color: #111111; text-decoration: none; padding: 10px 16px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; text-align: center">
-<span id="cd-label">21-Day Body Reset starts in</span>
+<span id="cd-label">21-Day Challenge starts in</span>
 <span id="cd-time" style="display: flex; gap: 6px; font-variant-numeric: tabular-nums"><span class="cdb"><b id="cd-d">--</b>d</span><span class="cdb"><b id="cd-h">--</b>h</span><span class="cdb"><b id="cd-m">--</b>m</span><span class="cdb"><b id="cd-s">--</b>s</span></span>
 <span style="text-decoration: underline">Join free →</span>
 </a>
@@ -87,7 +87,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <h1 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 92px; line-height: 0.92; letter-spacing: -0.02em; text-transform: uppercase">Life is busy.<br><span style="color: #FFD400">Move anyway.</span></h1>
 <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #BDBDBD; max-width: 520px">Helping busy people in Riyadh move more, whatever life throws at them. Led by Mazen: 40, two kids, full-time job, Ironman finisher.</p>
 <div style="display: flex; gap: 14px; flex-wrap: wrap">
-<a href="#challenge" style="background: #FFD400; color: #111111; text-decoration: none; font-weight: 700; font-size: 17px; padding: 18px 30px; border-radius: 999px">Join the free 21-day challenge</a>
+<a href="#challenge" style="background: #FFD400; color: #111111; text-decoration: none; font-weight: 700; font-size: 17px; padding: 18px 30px; border-radius: 999px">Join the free 21-Day Challenge</a>
 <a href="#mazen" id="hero-watch" style="border: 1.5px solid #F7F7F7; color: #F7F7F7; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Watch Mazen's story</a>
 </div>
 </div>
@@ -114,9 +114,9 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <div class="grid2">
 <div style="display: flex; flex-direction: column; gap: 24px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #FFD400">Free · 21 days · Starts <span id="start-date">9 December</span></span>
-<h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 64px; line-height: 0.98; text-transform: uppercase">The 21-Day<br><span style="color: #FFD400">Body Reset</span><br>Challenge</h2>
+<h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 64px; line-height: 0.98; text-transform: uppercase">The<br><span style="color: #FFD400">21-Day</span><br>Challenge</h2>
 <p style="margin: 0; font-size: 20px; line-height: 1.55; color: #BDBDBD">No extreme diets. No 2-hour gym sessions. Just <strong style="color: #FFFFFF">3 small wins a day</strong> for 21 days, with Mazen and a crew of busy people in Riyadh. The goal isn't to beat anyone. It's to become a better version of you.</p>
-<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #FFFFFF; font-weight: 600">Life is busy. Reset anyway.</p>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #FFFFFF; font-weight: 600">Life is busy. Move anyway.</p>
 <div style="display: flex; gap: 14px; flex-wrap: wrap">
 <a href="#join" style="background: #FFD400; color: #111111; text-decoration: none; font-weight: 700; font-size: 17px; padding: 18px 30px; border-radius: 999px">Save my free spot</a>
 <a href="#how" style="border: 1.5px solid #F7F7F7; color: #F7F7F7; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">How it works</a>
@@ -342,7 +342,7 @@ document.getElementById('challenge-form').addEventListener('submit',function(ev)
 ev.preventDefault();var f=ev.target,d={name:f.name.value,phone:f.phone.value,email:f.email.value,goal:f.goal.value};
 var msg=document.getElementById('form-msg');
 if(FORM_ENDPOINT){fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)}).catch(function(){});}
-var text="Hi Mazen! I'd like to join the 21-Day Body Reset Challenge.%0A%0AName: "+encodeURIComponent(d.name)+"%0AWhatsApp: "+encodeURIComponent(d.phone)+(d.email?"%0AEmail: "+encodeURIComponent(d.email):"")+"%0AGoal: "+encodeURIComponent(d.goal);
+var text="Hi Mazen! I'd like to join the 21-Day Challenge.%0A%0AName: "+encodeURIComponent(d.name)+"%0AWhatsApp: "+encodeURIComponent(d.phone)+(d.email?"%0AEmail: "+encodeURIComponent(d.email):"")+"%0AGoal: "+encodeURIComponent(d.goal);
 if(WHATSAPP_GROUP){msg.innerHTML="You're in, "+d.name.split(" ")[0]+"! Tap below if WhatsApp didn't open.<br><a href=\""+WHATSAPP_GROUP+"\" target=\"_blank\" rel=\"noopener\" style=\"display:inline-block;margin-top:10px;background:#25D366;color:#111;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700\">Join the WhatsApp group</a>";window.open(WHATSAPP_GROUP,"_blank");}
 else if(WHATSAPP_NUMBER){msg.textContent="You're in! Opening WhatsApp so you can send your sign-up…";window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+text,"_blank");}
 else{msg.textContent="Thanks, "+d.name+"! Sign-ups open soon.";}
@@ -354,7 +354,7 @@ f.reset();});
 function p(n){return (n<10?"0":"")+n}
 function tick(){var n=Date.now();
 if(n>=E){document.getElementById("cd-bar").style.display="none";return;}
-if(n>=T){var day=Math.floor((n-T)/864e5)+1;document.getElementById("cd-label").textContent="The 21-Day Body Reset is live · Day "+day+" of 21";document.getElementById("cd-time").style.display="none";return;}
+if(n>=T){var day=Math.floor((n-T)/864e5)+1;document.getElementById("cd-label").textContent="The 21-Day Challenge is live · Day "+day+" of 21";document.getElementById("cd-time").style.display="none";return;}
 var d=T-n;document.getElementById("cd-d").textContent=Math.floor(d/864e5);document.getElementById("cd-h").textContent=p(Math.floor(d/36e5)%24);document.getElementById("cd-m").textContent=p(Math.floor(d/6e4)%60);document.getElementById("cd-s").textContent=p(Math.floor(d/1e3)%60);}
 tick();setInterval(tick,1000);})();
 </script>
