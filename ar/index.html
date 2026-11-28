@@ -325,7 +325,7 @@ function fill(t,u){t.innerHTML='';t.style.aspectRatio='auto';t.style.overflow='v
 var any=false;
 REELS.forEach(function(u,i){var t=document.querySelector('[data-reel="'+i+'"]');if(!t)return;if(!u){t.setAttribute('data-empty','1');return;}fill(t,u);any=true;});
 if(any){document.querySelectorAll('[data-empty]').forEach(function(t){t.style.display='none';});}
-if(HERO_REEL){var hm=document.getElementById('hero-media');if(hm){fill(hm,HERO_REEL);any=true;}var h=document.getElementById('hero-watch');if(h){h.href='#mazen';h.textContent="شوف قصة مازن";}}
+if(HERO_REEL){var hm=document.getElementById('hero-media');if(hm){fill(hm,HERO_REEL);any=true;}var h=document.getElementById('hero-watch');if(h){h.href='#story';h.textContent="شوف قصة مازن";}}
 if(any){var sc=document.createElement('script');sc.async=true;sc.src='https://www.instagram.com/embed.js';document.body.appendChild(sc);}
 </script>
 
@@ -358,6 +358,21 @@ if(n>=E){document.getElementById("cd-bar").style.display="none";return;}
 if(n>=T){var day=Math.floor((n-T)/864e5)+1;document.getElementById("cd-label").textContent="تحدي الـ21 يوم بدأ · اليوم "+day+" من 21";document.getElementById("cd-time").style.display="none";return;}
 var d=T-n;document.getElementById("cd-d").textContent=Math.floor(d/864e5);document.getElementById("cd-h").textContent=p(Math.floor(d/36e5)%24);document.getElementById("cd-m").textContent=p(Math.floor(d/6e4)%60);document.getElementById("cd-s").textContent=p(Math.floor(d/1e3)%60);}
 tick();setInterval(tick,1000);})();
+</script>
+<div id="vmodal" role="dialog" aria-modal="true" aria-label="قصة مازن" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.88); align-items: center; justify-content: center; padding: 20px">
+<div style="position: relative; width: 100%; max-width: 960px">
+<button id="vclose" type="button" aria-label="إغلاق الفيديو" style="position: absolute; top: -52px; left: 0; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #FFD400; color: #111111; font-size: 26px; font-weight: 700; cursor: pointer; line-height: 1">×</button>
+<div style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000000"><iframe id="vframe" title="قصة مازن: Meta Mov" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe></div>
+</div>
+</div>
+<script>
+(function(){var m=document.getElementById("vmodal"),f=document.getElementById("vframe"),SRC="https://www.youtube-nocookie.com/embed/JFuzNc9o4xc?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+function open(e){if(e)e.preventDefault();f.src=SRC;m.style.display="flex";document.body.style.overflow="hidden";document.getElementById("vclose").focus();}
+function close(){f.src="../";m.style.display="none";document.body.style.overflow="";}
+var b=document.getElementById("hero-watch");if(b){b.addEventListener("click",open);}
+document.getElementById("vclose").addEventListener("click",close);
+m.addEventListener("click",function(e){if(e.target===m)close();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m.style.display==="flex")close();});})();
 </script>
 </body>
 </html>
