@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
 <title>Meta Mov · حركة تناسب حياتك · الرياض</title>
 <meta name="description" content="نساعد المشغولين في الرياض يتحركون أكثر. انضم لتحدي الـ21 يوم المجاني مع مازن.">
 <link rel="icon" href="../icon.png">
@@ -50,6 +50,13 @@ html,body{overflow-x:hidden}
  .hero .grid2 > div{min-width:0}
  h1,h2,h3,p,span,a,li,summary{overflow-wrap:anywhere}
 }
+
+html{width:100%;max-width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{width:100%;max-width:100%;position:relative}
+#cd-bar{max-width:100%;box-sizing:border-box}
+iframe.instagram-media,blockquote.instagram-media{min-width:0 !important;max-width:100% !important;width:100% !important;box-sizing:border-box}
+#hero-media,#challenge-video,[data-reel]{max-width:100%;min-width:0;overflow-x:clip}
+@media (max-width:820px){ .rail-wide > *{flex:0 0 min(336px,88vw) !important} }
 *{letter-spacing:0 !important}
 h1,h2{line-height:1.2 !important}
 </style>
