@@ -27,11 +27,11 @@ html,body{overflow-x:hidden}
  .grid2{gap:32px !important}
  .wrap > div[style*="gap: 72px"],#challenge > .wrap{gap:48px !important}
  .strip{flex-wrap:nowrap !important;overflow-x:auto;font-size:16px !important;gap:24px !important;white-space:nowrap;padding-top:16px !important;padding-bottom:16px !important}
- .rail{display:flex !important;flex-wrap:nowrap !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .rail{display:flex !important;flex-wrap:nowrap !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;margin-right:-16px;padding-right:16px;scrollbar-width:none}
  .rail > *{flex:0 0 80% !important;scroll-snap-align:start;min-height:0 !important}
  .rail-wide > *{flex:0 0 336px !important}
  .pad-m{padding:24px !important}
- #hero-media,#challenge-video{max-width:420px;margin:0 auto;width:100%}
+ #hero-media,#challenge-video{max-width:420px;margin:0 auto;width:100%;box-sizing:border-box}
  a[style*="padding: 18px 30px"],a[style*="padding: 17px 28px"]{padding:15px 22px !important;font-size:15px !important}
 }
 
@@ -52,7 +52,8 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-@media (max-width:820px){.grid3,.grid2{grid-template-columns:1fr}.hideM{display:none}.wrap{padding:0 20px}.hero h1{font-size:56px !important}}
+@media (max-width:820px){.grid3,.grid2{grid-template-columns:minmax(0,1fr)}
+ .grid2 > *,.grid3 > *{min-width:0}.hideM{display:none}.wrap{padding:0 16px}.hero h1{font-size:56px !important}}
 </style>
 
 <script>if("scrollRestoration" in history){history.scrollRestoration="manual";}if(location.hash){history.replaceState(null,"",location.pathname+location.search);}window.scrollTo(0,0);window.addEventListener("load",function(){window.scrollTo(0,0);});</script>
@@ -279,7 +280,7 @@ a{color:#FFD400}a:hover{color:#FFFFFF}
 <h2 style="margin: 0; font-family: Cairo, sans-serif; font-weight: 900; font-size: 72px; line-height: 0.95; text-transform: uppercase">الحياة مشغولة.<br><span style="color: #FFD400">تحرّك على أي حال.</span></h2>
 <p style="margin: 0; font-size: 18px; color: #BDBDBD; max-width: 560px">إيميل واحد بالأسبوع: نشاط في الرياض، إنجاز سريع، وجديد المجتمع.</p>
 <form id="news-form" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center" aria-label="النشرة البريدية">
-<label style="display: flex"><span style="position: absolute; left: -9999px">الإيميل</span><input name="email" type="email" required placeholder="you@email.com" style="font: inherit; padding: 16px 20px; border-radius: 999px; border: 1.5px solid #3A3A3A; background: #1E1E1E; color: #F7F7F7; min-width: 280px"></label>
+<label style="display: flex"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">الإيميل</span><input name="email" type="email" required placeholder="you@email.com" style="font: inherit; padding: 16px 20px; border-radius: 999px; border: 1.5px solid #3A3A3A; background: #1E1E1E; color: #F7F7F7; min-width: 280px"></label>
 <button type="submit" style="font: inherit; font-weight: 700; background: #FFD400; color: #111111; border: 0; border-radius: 999px; padding: 16px 26px; cursor: pointer">اشترك</button>
 </form>
 <p id="news-msg" role="status" style="margin: 0; font-weight: 600; color: #FFD400"></p>
